@@ -1,8 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: #f4f4f4;
 }
 
@@ -15,11 +14,12 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -27,8 +27,22 @@ nav ul li a {
     text-decoration: none;
 }
 
+main {
+    padding: 20px;
+}
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .profile {
-    margin-top: 50px;
+    text-align: center;
 }
 
 .profile-photo {
@@ -37,28 +51,19 @@ nav ul li a {
     height: 150px;
 }
 
-h1 {
-    font-size: 2em;
-    margin: 10px 0;
-}
-
 .title {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #333;
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #666;
 }
 
 .description {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #888;
-}
-
-.social-icons {
-    margin-top: 20px;
 }
 
 .social-icons a {
@@ -70,4 +75,48 @@ h1 {
 
 .social-icons a:hover {
     color: #007BFF;
+}
+
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-content {
+    flex: 2;
+    padding: 20px;
+}
+
+.project-content h2 {
+    margin-top: 0;
+}
+
+.project-content p {
+    margin: 10px 0;
+}
+
+.project-images {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-images img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
