@@ -83,33 +83,40 @@ h1 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: 20px 0;
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    /*max-width: 1200px;*/
 }
 
 .project-content {
-    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
 }
 
-.project-content h2 {
-    margin-top: 0;
+.text {
+    flex: 2;
+    min-width: 300px;
+    margin-right: 20px;
 }
 
-.project-content p {
-    margin: 10px 0;
+.text h2 {
+    margin-top: 0;
 }
 
 .project-images {
     flex: 1;
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     text-align: center;
 }
 
 .project-images img {
     max-width: 100%;
     border-radius: 8px;
-    margin: 10px 0;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 a {
