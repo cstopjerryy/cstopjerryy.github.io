@@ -98,7 +98,7 @@ h1 {
 .text {
     flex: 2;
     min-width: 300px;
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 .text h2 {
@@ -113,11 +113,19 @@ h1 {
     text-align: center;
 }
 
-.project-images img {
+.project-SS-images img {
     max-width: 100%;
     border-radius: 8px;
 
 }
+
+.project-images img {
+    max-width: 100%;
+    border-radius: 8px;
+    max-width: 50%;
+    max-height: 50%;
+}
+
 
 a {
     color: #007BFF;
