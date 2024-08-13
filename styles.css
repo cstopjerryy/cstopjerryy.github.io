@@ -6,26 +6,34 @@ body {
 }
 
 header {
-    background: linear-gradient(to top, #f4f4f4, #000000); /*#333;*/
-    /*background: #333;*/
+    background: linear-gradient(to top, #f4f4f4, #2a5298); /* 渐变蓝色调 */
     color: #fff;
     padding: 1em 0;
+    height: 300px; /* 增加header的高度 */
+    position: absolute; /* 使header绝对定位 */
+    width: 100%; /* 确保header宽度为100% */
+    z-index: 1; /* 确保header在上层 */
+    text-align: center; /* 使导航居中 */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    z-index: 10; /* 确保链接在上层 */
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
+    z-index: 10; /* 确保链接在上层 */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    position: relative; /* 确保链接相对定位 */
+    z-index: 10; /* 确保链接在上层 */
 }
 
 main {
@@ -34,8 +42,14 @@ main {
 
 section {
     padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* 添加分割线 */
+    position: relative; /* 使section相对定位 */
 }
+
+#about {
+    padding-bottom: 150px; /* 在about section底部增加额外的填充 */
+}
+
 
 h1 {
     text-align: center;
@@ -43,7 +57,11 @@ h1 {
 }
 
 .profile {
+    margin-top: 200px; /* 确保内容不会被header遮挡 */
     text-align: center;
+    padding: 20px;
+    z-index: 10; /* 确保内容在上层 */
+    position : relative; /* 使内容相对定位 */
 }
 
 .profile-photo {
@@ -52,6 +70,7 @@ h1 {
     height: 150px;
     border: 4px solid #007BFF; /* 添加边框颜色来突出头像 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+    z-index: 10; /* 确保内容在上层 */
 }
 
 .title {
@@ -86,11 +105,20 @@ h1 {
     text-decoration: none;
     color: #333;
     font-size: 1.0em;
+    display: inline-block; /* 确保链接也是内联块级元素 */
 }
 
 .social-icons a:hover {
-    color: #007BFF; /* 保持不变 */
+    /*color: #007BFF; /* 保持不变 */
     transform: scale(1.1); /* 添加缩放效果，使悬停时的图标更加突出 */
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* 可选：添加图标之间的间距 */
+    align-items: center; /* 垂直居中对齐 */
+    display: inline-block; /* 将图像设置为内联块级元素，避免小横线问题 */
 }
 
 .project {
