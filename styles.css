@@ -179,3 +179,87 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* 以下是card尝试 */
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+
+.card .box .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card .box .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .box .con-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.card .box .con-box div {
+    color: #fff;
+    padding: 20px;
+    background: linear-gradient(30deg, #514a9d, #24c6dc);
+    transform: translateZ(100px);
+}
+
+.card .box .con-box div h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.card .box .con-box div p {
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.card:hover .box {
+    transform: rotateY(180deg);
+}
+.no-link-style {
+    color: inherit; /* 继承父元素的颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.no-link-style:visited,
+.no-link-style:hover,
+.no-link-style:focus,
+.no-link-style:active {
+    color: inherit; /* 取消点击时变蓝 */
+    text-decoration: none; /* 保持无下划线 */
+}
