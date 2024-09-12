@@ -121,9 +121,8 @@ h1 {
 
 /* 修改部分开始：将项目卡片排成一行 */
 section#projects {
-    text-align: center;
     display: flex; /* 使用Flexbox布局 */
-    flex-direction: row; /* 先将标题和卡片放在一列 */
+    flex-direction: column; /* 先将标题和卡片放在一列 */
     align-items: center; /* 标题居中 */
     gap: 20px; /* 标题与卡片之间的间距 */
     padding: 20px;
@@ -151,11 +150,13 @@ section#projects {
 }
 
 .project-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    display: grid; /* 使用 Grid 布局 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 自适应列数，最小宽度为 250px */
+    gap: 100px; /* 卡片之间的间距 */
+    width: 100%;
+    max-width: 1200px; /* 设置最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+    padding: 20px; /* 添加内边距 */
 }
 
 .text {
@@ -197,6 +198,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
 
 /* 3D卡片样式 */
 .card {
