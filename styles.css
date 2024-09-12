@@ -50,7 +50,6 @@ section {
     padding-bottom: 150px; /* 在about section底部增加额外的填充 */
 }
 
-
 h1 {
     text-align: center;
     margin-bottom: 30px;
@@ -61,7 +60,7 @@ h1 {
     text-align: center;
     padding: 20px;
     z-index: 10; /* 确保内容在上层 */
-    position : relative; /* 使内容相对定位 */
+    position: relative; /* 使内容相对定位 */
 }
 
 .profile-photo {
@@ -81,7 +80,6 @@ h1 {
 .subtitle {
     font-size: 1.2em;
     color: #666;
-    
 }
 
 .description {
@@ -121,10 +119,32 @@ h1 {
     display: inline-block; /* 将图像设置为内联块级元素，避免小横线问题 */
 }
 
+/* 修改部分开始：将项目卡片排成一行 */
+section#projects {
+    text-align: center;
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: row; /* 先将标题和卡片放在一列 */
+    align-items: center; /* 标题居中 */
+    gap: 20px; /* 标题与卡片之间的间距 */
+    padding: 20px;
+}
+
+#projects h1 {
+    margin: 0; /* 去掉标题的额外间距 */
+}
+
+.projects-row {
+    display: flex; /* 使卡片在同一行 */
+    justify-content: space-around; /* 均匀分布卡片 */
+    width: 100%;
+    max-width: 1200px; /* 可选：设置最大宽度，防止过度拉伸 */
+}
+/* 修改部分结束 */
+
 .project {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     overflow: hidden;
     /*max-width: 1200px;*/
@@ -160,7 +180,6 @@ h1 {
 .project-SS-images img {
     max-width: 100%;
     border-radius: 8px;
-
 }
 
 .project-images img {
@@ -169,7 +188,6 @@ h1 {
     max-width: 50%;
     max-height: 50%;
 }
-
 
 a {
     color: #007BFF;
@@ -180,8 +198,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 以下是card尝试 */
-
+/* 3D卡片样式 */
 .card {
     position: relative;
     width: 320px;
@@ -235,6 +252,7 @@ a:hover {
     padding: 20px;
     background: linear-gradient(30deg, #514a9d, #24c6dc);
     transform: translateZ(100px);
+    position: relative; /* Make div position relative to position the button */
 }
 
 .card .box .con-box div h2 {
@@ -251,6 +269,7 @@ a:hover {
 .card:hover .box {
     transform: rotateY(180deg);
 }
+
 .no-link-style {
     color: inherit; /* 继承父元素的颜色 */
     text-decoration: none; /* 去掉下划线 */
@@ -262,4 +281,22 @@ a:hover {
 .no-link-style:active {
     color: inherit; /* 取消点击时变蓝 */
     text-decoration: none; /* 保持无下划线 */
+}
+
+.more-link {
+    position: absolute; /* Position the link absolutely within the .con-box */
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    color: #ffffff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding around the text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners, optional
+
+    transition: color 0.3s; /* Smooth transition for color on hover */
+    background-color: transparent; /* Fully transparent background */
+}
+
+.more-link:hover {
+    color: #d1d1d1; /* Optional: Slightly change text color on hover for effect */
 }
