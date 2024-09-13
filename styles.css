@@ -180,8 +180,9 @@ section#projects {
 }
 
 .project-SS-images img {
+    padding: 15px; /* Optional: Adds some padding around the images */
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 8px; 
 }
 
 .project-images img {
